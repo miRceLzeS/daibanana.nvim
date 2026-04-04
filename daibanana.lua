@@ -1,5 +1,60 @@
 local M = {}
 
+M.palette = {
+  -- base
+  bg        = "#121015",
+  bg_alt    = "#18151B",
+  surface   = "#221D24",
+  border    = "#3A3038",
+
+  -- text
+  fg        = "#E7DED3",
+  fg_soft   = "#B6AA9C",
+  comment   = "#857A73",
+
+  -- accents
+  red       = "#B44A57",
+  orange    = "#C97A49",
+  gold      = "#D1A34E",
+  green     = "#7E9A68",
+  blue      = "#7085BA",
+  magenta   = "#A86C8F",
+  cyan      = "#6E9E98",
+
+  -- ui
+  cursor    = "#F0D7A1",
+  selection = "#332A31",
+
+  -- states
+  error     = "#CC5C67",
+  warning   = "#D8A84D",
+  info      = "#7D96D1",
+  hint      = "#8AAE9B",
+
+  -- ansi
+  ansi      = {
+    "#18151B", -- black
+    "#B44A57", -- red
+    "#7E9A68", -- green
+    "#D1A34E", -- yellow
+    "#7085BA", -- blue
+    "#A86C8F", -- magenta
+    "#6E9E98", -- cyan
+    "#D8CFC4", -- white
+  },
+
+  brights   = {
+    "#6E6460", -- bright black
+    "#CD6975", -- bright red
+    "#99AD74", -- bright green
+    "#E1BA63", -- bright yellow
+    "#8EA3DC", -- bright blue
+    "#C28AAD", -- bright magenta
+    "#8DBAB3", -- bright cyan
+    "#F7F0E7", -- bright white
+  },
+}
+
 function M.setup()
   vim.opt.termguicolors = true
   vim.opt.background = "dark"
@@ -7,60 +62,7 @@ function M.setup()
   vim.cmd("highlight clear")
   vim.g.colors_name       = "daibanana"
 
-  local p                 = {
-    -- base
-    bg        = "#121015",
-    bg_alt    = "#18151B",
-    surface   = "#221D24",
-    border    = "#3A3038",
-
-    -- text
-    fg        = "#E7DED3",
-    fg_soft   = "#B6AA9C",
-    comment   = "#857A73",
-
-    -- accents
-    red       = "#B44A57",
-    orange    = "#C97A49",
-    gold      = "#D1A34E",
-    green     = "#7E9A68",
-    blue      = "#7085BA",
-    magenta   = "#A86C8F",
-    cyan      = "#6E9E98",
-
-    -- ui
-    cursor    = "#F0D7A1",
-    selection = "#332A31",
-
-    -- states
-    error     = "#CC5C67",
-    warning   = "#D8A84D",
-    info      = "#7D96D1",
-    hint      = "#8AAE9B",
-
-    -- ansi
-    ansi      = {
-      "#18151B", -- black
-      "#B44A57", -- red
-      "#7E9A68", -- green
-      "#D1A34E", -- yellow
-      "#7085BA", -- blue
-      "#A86C8F", -- magenta
-      "#6E9E98", -- cyan
-      "#D8CFC4", -- white
-    },
-
-    brights   = {
-      "#6E6460", -- bright black
-      "#CD6975", -- bright red
-      "#99AD74", -- bright green
-      "#E1BA63", -- bright yellow
-      "#8EA3DC", -- bright blue
-      "#C28AAD", -- bright magenta
-      "#8DBAB3", -- bright cyan
-      "#F7F0E7", -- bright white
-    },
-  }
+  local p                 = M.palette
 
   vim.g.terminal_color_0  = p.ansi[1]
   vim.g.terminal_color_1  = p.ansi[2]
