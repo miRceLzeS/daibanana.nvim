@@ -331,16 +331,16 @@ function M.load()
     ["@lsp.mod.async"]                       = { fg = p.cyan },
     ["@lsp.mod.modification"]                = { underline = true },
     ["@lsp.mod.documentation"]               = { fg = p.comment, italic = true },
-    ["@lsp.mod.defaultLibrary"]              = { fg = p.orange, italic = true },
+    ["@lsp.mod.defaultLibrary"]              = { italic = true },
 
     -- more specific semantic type+modifier combos
     ["@lsp.typemod.function.async"]          = { fg = p.cyan, bold = true },
     ["@lsp.typemod.method.async"]            = { fg = p.cyan },
-    ["@lsp.typemod.function.defaultLibrary"] = { fg = p.orange, bold = true },
+    ["@lsp.typemod.function.defaultLibrary"] = { bold = true },
     ["@lsp.typemod.variable.readonly"]       = { fg = p.orange, italic = true },
-    ["@lsp.typemod.variable.defaultLibrary"] = { fg = p.orange, italic = true },
+    ["@lsp.typemod.variable.defaultLibrary"] = { italic = true },
     ["@lsp.typemod.property.readonly"]       = { fg = p.orange },
-    ["@lsp.typemod.class.defaultLibrary"]    = { fg = p.orange, bold = true },
+    ["@lsp.typemod.class.defaultLibrary"]    = { bold = true },
 
     -- Treesitter
     ["@variable"]                            = { fg = p.fg },
