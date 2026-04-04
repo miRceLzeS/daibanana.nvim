@@ -1,1 +1,1 @@
-require("daibanana").setup()
+require("daibanana").load()

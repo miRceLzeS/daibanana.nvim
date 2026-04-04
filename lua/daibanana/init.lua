@@ -55,7 +55,7 @@ M.palette = {
   },
 }
 
-function M.setup()
+function M.load()
   vim.opt.termguicolors = true
   vim.opt.background = "dark"
 
@@ -429,6 +429,10 @@ function M.setup()
   for group, spec in pairs(highlights) do
     vim.api.nvim_set_hl(0, group, spec)
   end
+end
+
+function M.setup(opts)
+  _ = opts
 end
 
 return M
