@@ -322,7 +322,7 @@ function M.load()
     ["@lsp.type.variable"]                   = { fg = p.fg },
 
     -- semantic token modifiers
-    ["@lsp.mod.declaration"]                 = { bold = true },
+    ["@lsp.mod.declaration"]                 = { underline = true },
     ["@lsp.mod.definition"]                  = { underline = true },
     ["@lsp.mod.readonly"]                    = { italic = true },
     ["@lsp.mod.static"]                      = { fg = p.orange },
@@ -331,14 +331,14 @@ function M.load()
     ["@lsp.mod.async"]                       = { fg = p.cyan },
     ["@lsp.mod.modification"]                = { underline = true },
     ["@lsp.mod.documentation"]               = { fg = p.comment, italic = true },
-    ["@lsp.mod.defaultLibrary"]              = { italic = true },
+    ["@lsp.mod.defaultLibrary"]              = { bold = true, italic = true },
 
     -- more specific semantic type+modifier combos
     ["@lsp.typemod.function.async"]          = { fg = p.cyan, bold = true },
     ["@lsp.typemod.method.async"]            = { fg = p.cyan },
     ["@lsp.typemod.function.defaultLibrary"] = { bold = true },
     ["@lsp.typemod.variable.readonly"]       = { fg = p.orange, italic = true },
-    ["@lsp.typemod.variable.defaultLibrary"] = { italic = true },
+    ["@lsp.typemod.variable.defaultLibrary"] = { bold = true, italic = true },
     ["@lsp.typemod.property.readonly"]       = { fg = p.orange },
     ["@lsp.typemod.class.defaultLibrary"]    = { bold = true },
 
