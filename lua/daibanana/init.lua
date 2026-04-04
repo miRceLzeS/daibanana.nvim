@@ -1,5 +1,45 @@
 local M = {}
 
+local defaults = {
+  transparent = false,
+}
+
+local transparent_groups = {
+  Normal              = true,
+  NormalNC            = true,
+  NormalFloat         = true,
+  FloatBorder         = true,
+  FloatTitle          = true,
+  LineNr              = true,
+  SignColumn          = true,
+  FoldColumn          = true,
+  MsgArea             = true,
+  MsgSeparator        = true,
+  StatusLine          = true,
+  StatusLineNC        = true,
+  TabLine             = true,
+  TabLineFill         = true,
+  WinSeparator        = true,
+  VertSplit           = true,
+  Pmenu               = true,
+  ToolbarLine         = true,
+  DiagnosticSignError = true,
+  DiagnosticSignWarn  = true,
+  DiagnosticSignInfo  = true,
+  DiagnosticSignHint  = true,
+  DiagnosticSignOk    = true,
+}
+
+local function apply_transparency(highlights)
+  for group, spec in pairs(highlights) do
+    if transparent_groups[group] and spec.bg then
+      spec.bg = "NONE"
+    end
+  end
+end
+
+M.config = vim.deepcopy(defaults)
+
 M.palette = {
   -- base
   bg        = "#121015",
@@ -426,13 +466,17 @@ function M.load()
     ["@tag.delimiter"]                       = { fg = p.fg_soft },
   }
 
+  if M.config.transparent then
+    apply_transparency(highlights)
+  end
+
   for group, spec in pairs(highlights) do
     vim.api.nvim_set_hl(0, group, spec)
   end
 end
 
 function M.setup(opts)
-  _ = opts
+  M.config = vim.tbl_extend("force", vim.deepcopy(defaults), opts or {})
 end
 
 return M
