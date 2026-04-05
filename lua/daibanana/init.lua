@@ -282,10 +282,7 @@ function M.load()
     ToolbarButton                            = { fg = p.fg, bg = p.selection, bold = true },
 
     -- LSP
-    -- LSP UI + semantic tokens
-    -- merge into your existing `highlights` table
 
-    -- classic LSP highlight groups
     LspReferenceText                         = { bg = p.bg_alt, underline = true },
     LspReferenceRead                         = { bg = p.bg_alt, underline = true },
     LspReferenceWrite                        = { fg = p.red, bg = p.selection, bold = true },
@@ -322,7 +319,7 @@ function M.load()
     ["@lsp.type.variable"]                   = { fg = p.fg },
 
     -- semantic token modifiers
-    ["@lsp.mod.declaration"]                 = { underline = true },
+    ["@lsp.mod.declaration"]                 = { italic = true },
     ["@lsp.mod.definition"]                  = { underline = true },
     ["@lsp.mod.readonly"]                    = { italic = true },
     ["@lsp.mod.static"]                      = { fg = p.orange },
