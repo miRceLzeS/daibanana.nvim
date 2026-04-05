@@ -328,26 +328,26 @@ function M.load()
     ["@lsp.mod.async"]                       = { fg = p.cyan },
     ["@lsp.mod.modification"]                = { underline = true },
     ["@lsp.mod.documentation"]               = { fg = p.comment, italic = true },
-    ["@lsp.mod.defaultLibrary"]              = {},
-    ["@lsp.typemod.function.defaultLibrary"] = { fg = p.gold },
-    ["@lsp.typemod.method.defaultLibrary"]   = { fg = p.gold },
-    ["@lsp.typemod.variable.defaultLibrary"] = { fg = p.fg },
-    ["@lsp.typemod.property.defaultLibrary"] = { fg = p.fg },
-    ["@lsp.typemod.class.defaultLibrary"]    = { fg = p.blue },
+    ["@lsp.mod.defaultLibrary"]              = { fg = p.fg_soft, italic = true },
+    ["@lsp.typemod.function.defaultLibrary"] = { fg = p.fg_soft, italic = true },
+    ["@lsp.typemod.method.defaultLibrary"]   = { fg = p.fg_soft, italic = true },
+    ["@lsp.typemod.variable.defaultLibrary"] = { fg = p.fg_soft, italic = true },
+    ["@lsp.typemod.property.defaultLibrary"] = { fg = p.fg_soft, italic = true },
+    ["@lsp.typemod.class.defaultLibrary"]    = { fg = p.fg_soft, italic = true },
 
     -- Treesitter
     ["@variable"]                            = { fg = p.fg },
-    ["@variable.builtin"]                    = { fg = p.orange, italic = true },
+    ["@variable.builtin"]                    = { fg = p.fg_soft, italic = true },
     ["@variable.parameter"]                  = { fg = p.fg_soft, italic = true },
-    ["@variable.parameter.builtin"]          = { fg = p.orange, italic = true },
+    ["@variable.parameter.builtin"]          = { fg = p.fg_soft, italic = true },
     ["@variable.member"]                     = { fg = p.fg },
 
     ["@constant"]                            = { fg = p.orange },
-    ["@constant.builtin"]                    = { fg = p.orange, bold = true },
+    ["@constant.builtin"]                    = { fg = p.fg, bold = true },
     ["@constant.macro"]                      = { fg = p.magenta },
 
     ["@module"]                              = { fg = p.blue },
-    ["@module.builtin"]                      = { fg = p.blue, italic = true },
+    ["@module.builtin"]                      = { fg = p.fg_soft, italic = true },
     ["@label"]                               = { fg = p.gold },
 
     -- strings / chars / numbers
@@ -385,7 +385,7 @@ function M.load()
     ["@function.method"]                     = { fg = p.gold },
     ["@function.method.call"]                = { fg = p.gold },
 
-    ["@constructor"]                         = { fg = p.blue, bold = true },
+    ["@constructor"]                         = { fg = p.magenta, bold = true },
     ["@operator"]                            = { fg = p.fg_soft },
 
     -- keywords
