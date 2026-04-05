@@ -328,7 +328,7 @@ function M.load()
     ["@lsp.mod.async"]                       = { fg = p.cyan },
     ["@lsp.mod.modification"]                = { underline = true },
     ["@lsp.mod.documentation"]               = { fg = p.comment, italic = true },
-    ["@lsp.mod.defaultLibrary"]              = { fg = p.fg_soft, italic = true },
+    ["@lsp.mod.defaultLibrary"]              = {},
     ["@lsp.typemod.function.defaultLibrary"] = { fg = p.fg_soft, italic = true },
     ["@lsp.typemod.method.defaultLibrary"]   = { fg = p.fg_soft, italic = true },
     ["@lsp.typemod.variable.defaultLibrary"] = { fg = p.fg_soft, italic = true },
