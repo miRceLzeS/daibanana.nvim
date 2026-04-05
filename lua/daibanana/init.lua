@@ -328,16 +328,12 @@ function M.load()
     ["@lsp.mod.async"]                       = { fg = p.cyan },
     ["@lsp.mod.modification"]                = { underline = true },
     ["@lsp.mod.documentation"]               = { fg = p.comment, italic = true },
-    ["@lsp.mod.defaultLibrary"]              = { bold = true, italic = true },
-
-    -- more specific semantic type+modifier combos
-    ["@lsp.typemod.function.async"]          = { fg = p.cyan, bold = true },
-    ["@lsp.typemod.method.async"]            = { fg = p.cyan },
-    ["@lsp.typemod.function.defaultLibrary"] = { bold = true },
-    ["@lsp.typemod.variable.readonly"]       = { fg = p.orange, italic = true },
-    ["@lsp.typemod.variable.defaultLibrary"] = { bold = true, italic = true },
-    ["@lsp.typemod.property.readonly"]       = { fg = p.orange },
-    ["@lsp.typemod.class.defaultLibrary"]    = { bold = true },
+    ["@lsp.mod.defaultLibrary"]              = {},
+    ["@lsp.typemod.function.defaultLibrary"] = { fg = p.gold },
+    ["@lsp.typemod.method.defaultLibrary"]   = { fg = p.gold },
+    ["@lsp.typemod.variable.defaultLibrary"] = { fg = p.fg },
+    ["@lsp.typemod.property.defaultLibrary"] = { fg = p.fg },
+    ["@lsp.typemod.class.defaultLibrary"]    = { fg = p.blue },
 
     -- Treesitter
     ["@variable"]                            = { fg = p.fg },
